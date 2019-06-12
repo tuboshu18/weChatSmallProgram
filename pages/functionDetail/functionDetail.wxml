@@ -1,0 +1,26 @@
+<view class="page">
+    <view class="page__hd">
+        <view class="page__title">功能详情</view>
+    </view>
+    <view class="page__bd">
+        <view class="weui-article">
+            <view class="weui-article__section">
+                <view class="weui-article__section">
+                    <view class="weui-article__h3">首页</view>
+                    <view class="weui-article__p">
+                      没有刷新功能。上面的地点可以点击后进行地图选点。查看详情可以看更多的细节。点击股票查询之后。输入对应的代码可以在下方看到相应的数据。K线图没有提供，可以获取，但是不知道怎么展示，麻烦。
+                    </view>
+                </view>
+                <view class="weui-article__section">
+                    <view class="weui-article__h3">新闻</view>
+                    <view class="weui-article__p">
+                        没有提供下拉刷新，本次进入展示新闻的内容是固定的，但是下次进入时会在不同类别里进行随机，每天总的新闻量是固定的。上方的搜索框在按下键盘上的回车之后进行搜索。每次提供10条内容。
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="weui-footer">
+            <view class="weui-footer__text">Copyright © 1996-2019 缅因猫</view>
+        </view>
+    </view>
+</view>

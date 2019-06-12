@@ -1,0 +1,162 @@
+.backgroundView {
+  background-color: #F8F8F8;
+}
+.topView {
+  background-color: #F8F8F8;
+  width: 100%; 
+  position: relative;
+  text-align:center;
+  height: 200rpx;
+}
+.topImg {
+  width: 100%;
+  position: absolute;
+  top: 1%; 
+  left: 0;
+  right: 0;
+}
+.location {
+  color: red;
+  padding: 10rpx;
+  font-size: 42rpx;
+  font-family: "PingFangSC-Medium";
+  text-align: center;
+  position: absolute; 
+   /* z-index: 2;  */
+  top: 1%;  
+  left: 0;
+  right: 0;
+  height: 56rpx;
+}
+.location view {
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  white-space: nowrap; 
+}
+.location view text {
+  color: white;
+  font-size: 30rpx;
+  padding-right: 20rpx;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  padding-left: 60rpx;
+  white-space: nowrap;
+  border-radius: 30rpx;
+  background-color: rgba(215, 215, 215, 0.1);
+}
+.locationImg {
+  width: 28rpx;
+  height: 35rpx;
+  padding: 20rpx;
+  margin-right: -70rpx;
+  position: absolute;
+  z-index: 10;
+}
+.nowTemp {
+
+  font-size: 80rpx;
+  color: #fafbfb;
+  font-family: "SFUIDisplay-Regular";
+  position: absolute; 
+  top: 60%;
+  left: 0;
+  right: 50%;
+}
+.nowWind {
+  text-align: center;
+  color: white;
+  font-size: 40rpx;
+  position: absolute; 
+  top: 75%;
+  left: 28%;
+  right: 0;
+}
+.hourly {
+  height: 250rpx;
+  white-space: nowrap; 
+  display: flex; 
+  background-color: white;
+}
+.oneHourly {
+  height: 100%;
+  width: 150rpx;
+  display: inline-block;  
+  font-size:30rpx;  
+}
+.oneHourlyFlex {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25%;
+  margin-bottom: 10%;
+}
+.hourlyDate {
+  text-align: center;
+  color: #4B4B4B;
+  font-size: 30rpx;
+  font-family: "SFUIDisplay-Regular";
+}
+.hourlyImg {
+  width: 64rpx;
+  height: 64rpx;
+  text-align: center;
+}
+.hourlyTmp {
+  text-align: center; 
+  color: #4B4B4B;
+  font-size: 30rpx;
+  font-family: "PingFangSC-Semibold";
+}
+.hourlyWind {
+  text-align: center;
+  color: #4B4B4B;
+  font-size: 28rpx;
+  font-family: "PingFangSC-Medium";
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+}
+.hourlyWind image {
+  width: 16rpx;
+  height: 28rpx;
+  margin-right: 5rpx;
+}
+.table {
+  border: 0px solid darkgray;
+  width: 100%; 
+  position: relative;
+  text-align:center;
+  height: 200rpx;
+}
+.tr {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 3rem;
+  align-items: center;
+}
+.td {
+    width:40%;
+    justify-content: center;
+    text-align: center;
+}
+.bg-w{
+  background: snow;
+}
+.bg-g{
+  background: #E6F3F9;
+}
+.th {
+  width: 40%;
+  justify-content: center;
+  background: rgb(247, 248, 250);
+  color: rgb(24, 23, 23);
+  display: flex;
+  height: 3rem;
+  align-items: center;
+}

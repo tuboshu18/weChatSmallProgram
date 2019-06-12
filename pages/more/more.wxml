@@ -1,0 +1,39 @@
+<view class="container">
+	<view class="userinfo">
+		<image  class="userinfo-avatar" src="/images/public/head.jpg" background-size="cover"></image>
+		<text class="userinfo-nickname">缅因猫的小屋</text>
+	</view>
+  <view class="asset">
+    <view class='item' bindtap='goAsset'>
+      <view>年龄:</view>
+      <view>23</view>
+    </view>
+    <view class='item right' bindtap='goScore'>
+      <view>存款:</view>
+      <view>0</view>
+    </view>
+  </view>
+  <view style="height:10rpx;background: #eee;width:100%;"></view>
+  <view class="my-item">
+    <navigator url="/pages/aboutThisProject/technology/technology" hover-class="navigator-hover">技术概要</navigator>
+  </view>
+  <view class="my-item">
+    <navigator url="/pages/aboutThisProject/enviroment/enviroment" hover-class="navigator-hover">开发环境</navigator>
+  </view>
+  <view class="my-item" bindtap="sourceCodeAddress">
+   源码地址
+  </view> 
+  <view class="my-item" bindtap="blogAddress">
+    个人博客
+  </view>
+  <view style="height:20rpx;background: #eee;width:100%;"></view>
+  <view class="about" bindtap="aboutUs">
+    关于我
+  </view>
+
+  <view style="height:20rpx;background: #eee;width:100%;"></view>
+  <view class="my-item to-authorize">
+    <button type="primary" bindtap="functionDetail">功能详情</button>
+  </view>
+
+</view>

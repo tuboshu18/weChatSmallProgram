@@ -1,0 +1,32 @@
+<view class="page">
+    <view class="page__hd">
+        <view class="page__title">技术概要</view>
+    </view>
+    <view class="page__bd">
+        <view class="weui-article">
+            <view class="weui-article__section">
+                <view class="weui-article__section">
+                    <view class="weui-article__h3">关于组件</view>
+                    <view class="weui-article__p">
+                       微信小程序端主要采用WXUI这个组件，并且在实现功能的时候调用外部的接口，这些外部接口包括腾讯云函数，部署在云端的服务器。关于云函数，可以到腾讯云搜索对应的产品。云函数的运行语言是Python。
+                    </view>
+                </view>
+                <view class="weui-article__section">
+                    <view class="weui-article__h3">关于API</view>
+                    <view class="weui-article__p">
+                        天气的功能采用的是和风天气的API,股票信息采用的是新浪的接口进行解析，头条新闻采用是个人爬取的数据。新闻的关键词搜索采用的是腾讯云市场的api，收费。
+                    </view>
+                </view>
+                <view class="weui-article__section">
+                    <view class="weui-article__h3">致谢</view>
+                    <view class="weui-article__p">
+                        卢子碧java高级工程师的大力协助 在此深表谢意。虽然我不同意(ノへ￣、)
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="weui-footer">
+            <view class="weui-footer__text">Copyright © 1996-2019 缅因猫</view>
+        </view>
+    </view>
+</view>

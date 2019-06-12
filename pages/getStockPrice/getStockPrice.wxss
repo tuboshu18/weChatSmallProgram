@@ -1,0 +1,43 @@
+.button-sp-area{
+    margin: 0 auto;
+    padding-top: 15px;
+    width: 60%;
+}
+.mini-btn{
+    margin-right: 5px;
+}
+.table {
+  border: 0px solid darkgray;
+  width: 100%; 
+  position: relative;
+  text-align:center;
+  height: 200rpx;
+}
+.tr {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 3rem;
+  align-items: center;
+}
+.td {
+    width:60%;
+    justify-content: center;
+    text-align: center;
+}
+.bg-w{
+  background: snow;
+}
+.bg-g{
+  background: rgba(172, 227, 235, 0.651);
+}
+.th {
+  width: 60%;
+  justify-content: center;
+  background: rgb(247, 248, 250);
+  color: rgb(24, 23, 23);
+  display: flex;
+  height: 3rem;
+  align-items: center;
+}
+

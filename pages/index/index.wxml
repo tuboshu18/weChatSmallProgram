@@ -1,0 +1,123 @@
+<wxs module="m1">
+  var getLast = function(index, str) {
+    if (index == 0) {
+      return "现在";
+    } else {
+      return str.split(" ")[1];
+    }
+  }
+  var getDailyDate = function(index, str) {
+    if (index == 0) {
+      return "今天";
+    } else {
+      return str.split("-")[1] + "/" + str.split("-")[2];
+    }
+  }
+  var windTrans = function(str) {
+    if (str.match("-")) {
+      return str + "级";
+    } else {
+      return str;
+    }
+  }
+  var windDirection = function(str) {
+    if (str.indexOf("东北") != -1) {
+      return "eastnorth";
+    } else if (str.indexOf("东南") != -1) {
+      return "eastsouth";
+    } else if (str.indexOf("西南") != -1) {
+      return "westsouth";
+    } else if (str.indexOf("西北") != -1) {
+      return "westnorth";
+    } else if (str.indexOf("东") != -1) {
+      return "east";
+    } else if (str.indexOf("南") != -1) {
+      return "south";
+    } else if (str.indexOf("西") != -1) {
+      return "west";
+    } else if (str.indexOf("北") != -1) {
+      return "north";
+    } else {
+      return "north";
+    }
+  }
+  var nowBackImage = function(code, temp) {
+    if (code >= 100 && code <= 104) {      
+        return "sun";
+    } else if (code >= 105 && code <= 213) {
+      return "sun";
+    } else if (code >= 300 && code <= 313) {
+      return "rain";
+    } else if (code >= 400 && code <= 407) {
+      return "snow";
+    } else if (code >= 500 && code <= 508) {
+      return "smog";
+    } else {
+      return "sun";
+    }
+  }
+  module.exports.getLast = getLast;
+  module.exports.getDailyDate = getDailyDate;
+  module.exports.windTrans = windTrans;
+  module.exports.windDirection = windDirection;
+  module.exports.nowBackImage = nowBackImage;
+</wxs>
+<view class='backgroundView'>
+    <view class='content'>
+      <view class='topView'>
+        <image src='../img/{{m1.nowBackImage(nowBackGround[0], nowBackGround[1])}}.png' class='topImg' mode='scaleToFit'></image>
+        <view class='location' bindtap='chooseLocation'>
+          <view>
+            <image class='locationImg' src='../img/location.png' mode='aspectFit'></image>
+            <text >{{location}}</text>
+          </view>
+        </view>
+        <view class='nowTemp'>{{nowTemperature}}</view>
+        <view class='nowWind'>{{nowWind}}</view>
+      </view>
+
+      <scroll-view class='hourly' scroll-x="true">
+        <block wx:for="{{hourlyArr}}" wx:key="unique" style="display: block;">
+          <view class='oneHourly'>
+            <view class='oneHourlyFlex'>
+              <view class='hourlyDate'>{{m1.getLast(index, item.time)}}</view> 
+              <image class='hourlyImg' src='../img/{{item.cond_code}}.png' mode='aspectFit'></image>
+              <view class='hourlyTmp'>{{item.tmp}}°</view>
+              <view class='hourlyWind'>
+                <image src='../img/{{m1.windDirection(item.wind_dir)}}.png' mode='aspectFit'></image>
+                <text>{{m1.windTrans(item.wind_sc)}}</text>
+              </view>
+            </view>
+          </view>
+        </block>
+      </scroll-view>
+    </view>
+  <!-- </scroll-view> -->
+ 
+</view>
+
+<view class="table">
+  <view class="tr bg-w">
+    <view class="th">名称</view>
+    <view class="th">现价</view>
+    <view class="th ">涨跌幅</view>
+    <view class="th ">查看详情</view>
+  </view>
+  <block wx:for="{{listData}}" wx:key="{{inxid}}"> 
+    <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+      <view class="td">{{item.inxnm}}</view>
+      <view class="td">{{item.last_price}}</view>
+      <view class="td">{{item.rise_fall_per}}</view>
+      <view class="td"><view class="m-view-cell" bindtap="getdasInfo" id="{{index}}">详情</view></view>
+    </view>
+    <view class="tr" wx:else>
+      <view class="td">{{item.inxnm}}</view>
+      <view class="td">{{item.last_price}}</view>
+      <view class="td">{{item.rise_fall_per}}</view>
+      <view class="td"><view class="m-view-cell" bindtap="getdasInfo" id="{{index}}">详情</view></view>
+    </view>
+  </block>
+  <view class="page__bd page__bd_spacing">
+    <button class="weui-btn" type="warn" bindtap='getStockPrice'>股票价格查询</button>
+  </view>
+</view>

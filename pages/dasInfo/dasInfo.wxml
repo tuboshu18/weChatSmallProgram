@@ -1,0 +1,61 @@
+<view class="page">
+    <view class="page__hd">
+        <view class="page__title">指数详情</view>
+    </view>
+    <view class="page__bd">
+        <view class="weui-form-preview">
+            <view class="weui-form-preview__hd">
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">指数名称</view>
+                    <view class="weui-form-preview__value_in-hd">{{inxnm}}</view>
+                </view>
+            </view>
+            <view class="weui-form-preview__bd">
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">所属区域</view>
+                    <view class="weui-form-preview__value">{{typeid}}</view>
+                </view>
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">昨收盘</view>
+                    <view class="weui-form-preview__value">{{yesy_price}}</view>
+                </view>
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">今开盘</view>
+                    <view class="weui-form-preview__value">{{open_price}}</view>
+                </view>
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">当前价</view>
+                    <view class="weui-form-preview__value">{{last_price}}</view>
+                </view>
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">涨跌</view>
+                    <view class="weui-form-preview__value">{{rise_fall}}</view>
+                </view>
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">涨跌百分比</view>
+                    <view class="weui-form-preview__value">{{rise_fall_per}}</view>
+                </view>
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">最高价</view>
+                    <view class="weui-form-preview__value">{{high_price}}</view>
+                </view>
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">最低价</view>
+                    <view class="weui-form-preview__value">{{low_price}}</view>
+                </view>
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">振幅百分比</view>
+                    <view class="weui-form-preview__value">{{amplitude_price_per}}</view>
+                </view>
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">更新时间</view>
+                    <view class="weui-form-preview__value">{{uptime}}</view>
+                </view>
+            </view>
+            <view class="weui-form-preview__ft">
+                <navigator url="/pages/index/index" open-type='switchTab' class="weui-form-preview__btn weui-form-preview__btn_primary" >返回</navigator>
+            </view>
+        </view>
+        
+    </view>
+</view>
